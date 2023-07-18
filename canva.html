@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>Exemple canva</h1>
+   <script>
+      const canvas = document.getElementById("canva");/* tu recupere ta toile que t'as mis en html */
+      canvas.width  = 500
+      canvas.height  = 500
+      const ctx = canvas.getContext("2d"); /* tu crée un contexte d'edition, 3d ou 2d, et ensuite avec ce contexte tu pourra dessiner */
+
+      ctx.fillRect(20, 20, 150, 100);/* ici je fais un carré en x = 20, y = 20, hauteur = 150 et largeur = 100 */
+      ctx.clearRect(0,0,500,500) /* la par exemple je clear tout le canva */
+      for (let row = 0; row <= 500; row += 100){
+         for (let column = 0; column <= 500; column += 100){
+            ctx.beginPath()
+            ctx.rect(row,column,100,100)
+            ctx.stroke()
+
+         }
+      }
+      let a = []
+      for (let i = 0; i< 10;i++){
+         let row = []
+         for (let g = 0; g< 10;g++){
+            row.push(document.createElement("div"))
+         }
+         a.push(row)
+      }
+      let ob = {feur:"aa"}
+      const aa = "feur"
+      console.log(ob.aa)
+      /* et hop un quadrillage */
+      
+   </script>
+</body>
+</html>
